@@ -1,0 +1,15 @@
+{
+    "id":1,
+    "primer_nombre": "Sergio",
+    "segundo_nombre": "Enrique",
+    "primer_apellido": "Polo",
+    "segundo apellido": "Santanilla",
+    "edad": 25,
+    "direccion": {
+        "pais": "Colombia",
+        "ciudad": "Bogotá"
+    },
+    "hobbies": ["Videojuegos", "musica", "caminar", "viajar"],
+    "esCasado": false
+
+}
