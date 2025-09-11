@@ -4,7 +4,7 @@
   "description": "Proyecto de clase bootcamp desarrollo web full stack",
   "main": "app.js",
   "type": "module",
-  "ovveride":"true",
+  "ovveride": "true",
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
@@ -12,9 +12,13 @@
   "author": "Sergio Polo",
   "license": "ISC",
   "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
     "dotenv": "^17.2.1",
     "express": "^5.1.0",
-    "mongoose": "^8.18.0"
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.18.0",
+    "multer": "^2.0.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.10"

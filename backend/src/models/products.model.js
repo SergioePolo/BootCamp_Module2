@@ -20,7 +20,7 @@ const productSchema = new Schema({
     },
     categories: {
         type: String,
-        enum: ["helado, carnes, alcohol, frituras"]
+        enum: ["helado", "carnes", "alcohol", "frituras"]
     },
     isAvailable: {
         type: Boolean,
