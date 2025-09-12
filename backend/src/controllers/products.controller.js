@@ -2,8 +2,20 @@ import { productModel } from "../models/products.model.js";
 
 export const postProduct = async (req, res) => {
     try {
+
+        if(!req.file){//Validación de que el usuario si cargo un archivo para la imagen
+            return res.status(400).json({
+                msg: 'Please provide a correct file for the product image'
+            })
+        }
+        //Organiza el objeto primero para realizar las operaciones necesarias y poder cargarlo después correctamente
+        const newProduct = {
+            ...req.body,
+            image: `/uploads/${req.file.filename}`
+        }
+
         // inicializar el modelo para guardar en la base de datos
-        await productModel.create(req.body);
+        await productModel.create(newProduct);
         return res.status(201).json({
             msg:'The product was created succesfully'
         });
