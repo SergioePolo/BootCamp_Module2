@@ -6,6 +6,7 @@ import { fileURLToPath } from 'url';
 import { mongoConection } from './src/config/db.js';
 import {UserRouter} from './src/routes/users.routes.js';
 import {productRouter} from './src/routes/products.routes.js';
+import { loginRouter } from './src/routes/login.Routes.js';
 
 const app = express();
 doetnv.config();
@@ -22,6 +23,7 @@ app.use(express.json());
 app.use('/users', UserRouter);
 app.use('/products', productRouter);
 app.use('/uploads', express.static(path.join(_dirname,'uploads')));//Expone la carpeta que necesito a la red
+app.use('/login', loginRouter);
 
 app.listen(port, () =>{
     console.log(`Servidor escuchando en http://localhost:${port}`);

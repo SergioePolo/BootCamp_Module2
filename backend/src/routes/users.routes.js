@@ -1,9 +1,10 @@
 import express from 'express';
 import { getAllUsers, postUser, putUserById, deleteUserById } from '../controllers/users.controller.js';
+import { auth } from '../middleware/auth.js';
 
 export const UserRouter = express.Router();
 
-UserRouter.get('/', getAllUsers);
+UserRouter.get('/', auth('admin'), getAllUsers);
 
 UserRouter.post('/',postUser);
 
