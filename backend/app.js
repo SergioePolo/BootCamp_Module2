@@ -23,7 +23,7 @@ app.use(express.json());
 app.use('/users', UserRouter);
 app.use('/products', productRouter);
 app.use('/uploads', express.static(path.join(_dirname,'uploads')));//Expone la carpeta que necesito a la red
-app.use('/login', loginRouter);
+app.use('/login', loginRouter)
 
 app.listen(port, () =>{
     console.log(`Servidor escuchando en http://localhost:${port}`);
